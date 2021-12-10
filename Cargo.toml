@@ -14,3 +14,7 @@ path = "src/d1p1.rs"
 [[bin]]
 name = "d1p2"
 path = "src/d1p2.rs"
+
+[[bin]]
+name = "d2p1"
+path = "src/d2p1.rs"
