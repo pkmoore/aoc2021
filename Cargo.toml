@@ -26,3 +26,7 @@ path = "src/d2p2.rs"
 [[bin]]
 name = "d3p1"
 path = "src/d3p1.rs"
+
+[[bin]]
+name = "d3p2"
+path = "src/d3p2.rs"
