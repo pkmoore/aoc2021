@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+num-integer = "0.1"
 
 [[bin]]
 name = "d1p1"
@@ -26,3 +27,7 @@ path = "src/d2p2.rs"
 [[bin]]
 name = "d3p1"
 path = "src/d3p1.rs"
+
+[[bin]]
+name = "d3p2"
+path = "src/d3p2.rs"
