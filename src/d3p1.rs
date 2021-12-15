@@ -32,13 +32,10 @@ fn main() -> std::io::Result<()> {
             _ => 'X',
         })
         .collect::<String>();
-    println!("{:#?}", epsilon);
-    println!("{:#?}", gamma);
+
     let epsilon = isize::from_str_radix(&epsilon, 2).unwrap();
-    println!("{}", epsilon);
     let gamma = isize::from_str_radix(&gamma, 2).unwrap();
-    println!("{}", gamma);
-    println!("result: {}", epsilon * gamma);
+    println!("Power Rating: {}", epsilon * gamma);
 
     Ok(())
 }
