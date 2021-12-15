@@ -40,6 +40,6 @@ fn main() -> std::io::Result<()> {
     Ok(())
 }
 
-fn column_vec_from_lines(index: usize, lines: &Vec<Vec<char>>) -> Vec<char> {
+fn column_vec_from_lines(index: usize, lines: &[Vec<char>]) -> Vec<char> {
     lines.iter().map(|x| x[index]).collect::<Vec<char>>()
 }

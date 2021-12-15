@@ -9,7 +9,7 @@ fn main() -> std::io::Result<()> {
         .lines()
         .map(|x| {
             x.unwrap()
-                .split(" ")
+                .split(' ')
                 .map(|y| y.to_string())
                 .collect::<Vec<String>>()
         })
@@ -30,8 +30,7 @@ fn main() -> std::io::Result<()> {
             "down" => aim += amount,
             _ => panic!("Bad direction"),
         }
-        println!("X: {} Y: {} Aim: {}", x_coord, y_coord, aim)
     }
-    println!("Result: {}", x_coord * y_coord);
+    println!("D2P2 Result: {}", x_coord * y_coord);
     Ok(())
 }
