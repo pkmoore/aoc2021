@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 num-integer = "0.1"
+itertools = "0.10.2"
 
 [[bin]]
 name = "d1p1"
@@ -31,3 +32,7 @@ path = "src/d3p1.rs"
 [[bin]]
 name = "d3p2"
 path = "src/d3p2.rs"
+
+[[bin]]
+name = "d4p1"
+path = "src/d4p1.rs"
