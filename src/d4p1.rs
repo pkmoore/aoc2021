@@ -43,12 +43,6 @@ fn main() -> std::io::Result<()> {
         }
     }
 
-   // for i in (0..boards.len()).step_by(25) {
-   //     check_board(&boards[i..i+25]);
-   // }
-
-    //print_boards(boards);
-
     println!("D4P1 Result: {}", score_board(result.unwrap(), latest_num));
 
     Ok(())
@@ -82,15 +76,22 @@ fn check_board(b: &[(u32, bool)]) -> bool {
         }
     }
 
+    // Vertical wins
     let mut winner = true;
+    // For each column... 
     for i in 0..5 {
+        // ...assume we have a winner
         winner = true;
-        for j in (0..5) {
+        // Look through each cell in the column
+        for j in 0..5 {
+            // This indexing expression jumps through the 1D array to hit all the cells in the column
             if b[(j * 5) + i].1 == false {
+                // If we get any that are unmarked (aka b[...].1 == false) we note that the column isn't a winner and bail out of this inner loop
                 winner = false;
                 break;
             }
         }
+        // If we get to here and winner is true, then all of the column's cells are marked so we have a winner
         if winner {
             break;
         }
@@ -101,6 +102,7 @@ fn check_board(b: &[(u32, bool)]) -> bool {
     winner
 }
 
+#[allow(dead_code)]
 fn print_boards(b: Vec<(u32, bool)>) {
     for i in (0..b.len()).step_by(25) {
         print_board(&b[i..i+25]);
@@ -108,6 +110,7 @@ fn print_boards(b: Vec<(u32, bool)>) {
     }
 }
 
+#[allow(dead_code)]
 fn print_board(b: &[(u32, bool)]) {
     assert!(b.len() == 25, "Cannot print illegal board size");
     for i in 0..5 {
