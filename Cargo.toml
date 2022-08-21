@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 num-integer = "0.1"
 itertools = "0.10.2"
+num = "0.4.0"
 
 [[bin]]
 name = "d1p1"
