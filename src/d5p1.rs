@@ -27,6 +27,8 @@ fn main() -> std::io::Result<()> {
 
 
     for line in lines { 
+        // For Part 1, we are only concerned with horizontal or vetical lines
+        // i.e. lines where x1 == x2 or y1 == y2
         if line[0][0] == line[1][0] || line[0][1] == line[1][1] {
             let points = get_segment_points(&line[0], &line[1]);
             for point in points {
