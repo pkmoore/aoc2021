@@ -9,6 +9,8 @@ fn main() -> std::io::Result<()> {
     reader.read_to_string(&mut data)?;
     let mut fish = data.split(",").map(|x| x.parse::<u32>().unwrap()).collect::<Vec<u32>>();
 
+    // Straightfoward approach, fish vec grows according to rules for 80 days
+    // loop through teach element every tick and update accordingly
     for _day in 0..80 {
         tick(&mut fish);
     }
